@@ -22,11 +22,11 @@ class OpenApiTest {
     MessageSubscriber subscriber;
 
     @Test
-    void apiDocs_useForwardedHttpsAddress() throws Exception {
+    void apiDocs_useCurrentOrigin() throws Exception {
         mvc.perform(get("/v3/api-docs")
                         .header("X-Forwarded-Proto", "https")
                         .header("X-Forwarded-Host", "chat.example.com"))
                 .andExpect(status().isOk())
-                .andExpect(jsonPath("$.servers[0].url").value("https://chat.example.com"));
+                .andExpect(jsonPath("$.servers[0].url").value("/"));
     }
 }
