@@ -6,6 +6,8 @@ Deployed backend: https://freightfox-simpleapp-production.up.railway.app
 
 Swagger UI: https://freightfox-simpleapp-production.up.railway.app/swagger-ui.html
 
+Swagger sends requests to the same server that serves the documentation.
+
 ```text
 HTTP -> controller -> service -> repository -> Redis
           SSE registry <- subscriber <- Redis Pub/Sub
