@@ -2,6 +2,10 @@
 
 Spring Boot backend using Redis for rooms, history and live messages. Requires Java 17.
 
+Deployed backend: https://freightfox-simpleapp-production.up.railway.app
+
+Swagger UI: https://freightfox-simpleapp-production.up.railway.app/swagger-ui.html
+
 ```text
 HTTP -> controller -> service -> repository -> Redis
           SSE registry <- subscriber <- Redis Pub/Sub
